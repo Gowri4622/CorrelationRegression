@@ -28,6 +28,7 @@ If y represents the dependent variable and x the independent variable, this rela
 
 import numpy as np
 import math
+import matplotlib.pyplot as plt
 x=[25,28,35,32,31,36,29,38,34,32]
 y=[43,46,49,41,36,32,31,30,33,39]
 
@@ -49,9 +50,30 @@ for i in range(0,10):
 N=10
 r=(N*Sxy-Sx*Sy)/(math.sqrt(N*Sx2-Sx**2)*math.sqrt(N*Sy2-Sy**2))
 print("The Correlation Coefficient is %0.3f"%r)
+
+byx=(N*Sxy-Sx*Sy)/(N*Sx2-Sx**2)
+xmean=Sx/N
+ymean=Sy/N
+print("The regression line Y on X is ::: Y = 0 %0.3f %0.3f (X - %0.3f)"%(ymean,byx,xmean))
+
+plt.plot(x,y,'o')
+
+x=np.linspace(20,40,51)
+
+def f(x):
+    return ymean+byx*(x-xmean)
+
+y=f(x)
+plt.plot(x,y,'r')
+plt.title("Fitting Regression Line")
+plt.xlabel("X data")
+plt.ylabel("Y data")
+plt.legend(['Data points','Regression line'])
+plt.show()
 ```
 
 # Output : 
+![pqm](https://user-images.githubusercontent.com/75235455/170186826-412fd47d-5250-4f19-848c-59a7ad1e7c26.PNG)
 
 
 # Result :
