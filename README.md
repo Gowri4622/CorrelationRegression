@@ -82,6 +82,15 @@ plt.ylabel("Y data")
 plt.legend(['Data points','Regression line'])
 plt.show()
 ```
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 
 # Output : 
 ![pqm](https://user-images.githubusercontent.com/75235455/170186826-412fd47d-5250-4f19-848c-59a7ad1e7c26.PNG)
